@@ -26,7 +26,6 @@
 		"cli"
 	],
 	"author": "yejiang1015",
-	"publishConfig": { "registry": "https://npm.pkg.github.com/" },
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/yejiang1015/xea-cli-node-service/issues"
