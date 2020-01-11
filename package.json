@@ -30,7 +30,7 @@
 	"bugs": {
 		"url": "https://github.com/yejiang1015/xea-cli-node-service/issues"
 	},
-	"devDependencies": {
+	"dependencies": {
 		"clean-webpack-plugin": "^3.0.0",
 		"colors": "^1.4.0",
 		"nodemon-webpack-plugin": "^4.2.2",
