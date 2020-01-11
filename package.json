@@ -1,0 +1,45 @@
+{
+	"name": "xea-cli-node-service",
+	"version": "1.0.0",
+	"main": "index.js",
+	"bin": {
+		"xea-cli-node-service": "./bin/index"
+	},
+	"description": "node ts 项目开发环境，打包",
+	"homepage": "https://github.com/yejiang1015/xea-cli-node-service#readme",
+	"scripts": {
+		"start": "node ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yejiang1015/xea-cli-node-service.git"
+	},
+	"directories": {
+		"lib": "lib",
+		"test": "test"
+	},
+	"keywords": [
+		"node",
+		"ts",
+		"node工具",
+		"webpack",
+		"cli"
+	],
+	"author": "yejiang1015",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/yejiang1015/xea-cli-node-service/issues"
+	},
+	"devDependencies": {
+		"clean-webpack-plugin": "^3.0.0",
+		"colors": "^1.4.0",
+		"nodemon-webpack-plugin": "^4.2.2",
+		"progress-bar-webpack-plugin": "^1.12.1",
+		"readline": "^1.3.0",
+		"ts-loader": "^6.2.1",
+		"typescript": "^3.7.4",
+		"webpack": "^4.41.5",
+		"webpack-cli": "^3.3.10",
+		"webpack-node-externals": "^1.7.2"
+	}
+}
