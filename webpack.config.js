@@ -7,23 +7,6 @@ const AppOptions = require("./lib").loadOptions();
 
 const DEV = process.env.NODE_ENV === "development";
 
-const getExternals = () => {
-	let dev = [
-		"uws",
-		NodeExternals({
-			whitelist: ["webpack/hot/signal"]
-		})
-	];
-	let pro = ["uws"];
-	if (!AppOptions.buildNodeModules) {
-		pro.push(
-			NodeExternals({
-				whitelist: ["webpack/hot/signal"]
-			})
-		);
-	}
-	return DEV ? dev : pro;
-};
 module.exports = {
 	target: "node",
 	mode: DEV ? "development" : "production",
@@ -46,7 +29,14 @@ module.exports = {
 			"~": AppOptions.rootPath
 		}
 	},
-	externals: getExternals(),
+	externals: [
+		/public\/library\/.+$/,
+		!AppOptions.buildNodeModules &&
+			NodeExternals({
+				whitelist: ["webpack/hot/signal"]
+			}),
+		"uws"
+	].filter(d => d),
 	module: {
 		rules: [
 			{

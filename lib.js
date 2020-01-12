@@ -28,7 +28,9 @@ class Utils {
 		console.info(title + ` Compiled successfully in:  ${stats.endTime - stats.startTime}ms`.green);
 		console.info(`\n`);
 		console.info(title + ` - Types:     Compiled ${colors.red(type)}`.green);
-		console.info(title + ` - Local:     http://localhost:${port}/\n`.green);
+		if (port) {
+			console.info(title + ` - Local:     http://localhost:${port}/\n`.green);
+		}
 		return undefined;
 	}
 	loadOptions() {
